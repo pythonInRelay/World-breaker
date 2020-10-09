@@ -2,13 +2,18 @@
 
 public class Paddle : MonoBehaviour
 {
-    [SerializeField] private float screenWidthInUnits = 16f;
+    // Configuration parameters
     
+    [SerializeField] private float screenWidthInUnits = 16f;
+    [SerializeField] private float minX = 1f;
+    [SerializeField] private float maxX = 15f;
     private void Update()
     {
         var mousePosInUnits = Input.mousePosition.x / Screen.width * screenWidthInUnits;
-        var transform1 = transform;
-        var paddlePos = new Vector2(mousePosInUnits, transform1.position.y);
-        transform1.position = paddlePos;
+        var paddlePos = new Vector2(transform.position.x, transform.position.y);
+        paddlePos.x = Mathf.Clamp(mousePosInUnits, minX, maxX);  // for the paddle pos on x-axis
+                                                                 // do not go any higher or lower
+                                                                 // than the game window width
+        transform.position = paddlePos;
     }
 }
