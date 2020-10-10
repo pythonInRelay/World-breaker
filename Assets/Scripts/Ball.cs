@@ -26,6 +26,7 @@ public class Ball : MonoBehaviour
         if (_hasStarted) return;
         LockBallToPaddle();
         LaunchOnMouseClick();  // Same for this script
+        _rigidBody2D.velocity = _rigidBody2D.velocity.normalized * ballVelocityY;
     }
 
     private void LaunchOnMouseClick()

@@ -1,4 +1,4 @@
-# World Breaker Game [IN PROGRESS]
+# World Breaker Game
 
 _________________________
 
@@ -6,9 +6,9 @@ _________________________
 
 _________________________
 
-World Breaker is a breakout-themed game. Bounce the ball against the blocks until all are broken and without allowing the ball to leave the game area.
+World Breaker is a breakout-themed game designed with a rustic feel. Bounce the comet against the UFO until all the blocks are broken. If the ball leaves the game area, it's game over.
 
-**Time taken to completion: In Progress**
+**Time taken to completion: Roughly 3 hours**
 
 _________________________
 
@@ -16,6 +16,7 @@ _________________________
 
 * All Unity features from my previous 3 projects
 * Gravity
+* Prefabs
 * 2D Box/Circle/Polygon colliders & collision
 * Bounds
 * Rigid Body 2D
